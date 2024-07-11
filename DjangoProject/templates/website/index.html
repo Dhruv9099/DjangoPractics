@@ -1,15 +1,11 @@
-{% load static%}
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Django Project</title>
-    <link rel="stylesheet" href="{% static "style.css" %}">
-  </head>
-  <body>
-    <h1> My First Django Project.</h1>
-    <h2> Welcome to Home Page.</h2>
+{% extends 'layout.html' %}
 
-</body>  
-</html>
+{% block title %}
+Home Page usign jinja
+{% endblock %}
+
+
+{% block content %}
+<h1>Welocme To My First Django Project | DHRUV MAISURIA</h1>
+{% endblock %}
+
