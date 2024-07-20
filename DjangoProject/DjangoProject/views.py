@@ -11,3 +11,6 @@ def about(request):
 def contact(request):
     # return HttpResponse("Hello, This is my first Django Project, you are at Contact page. ")
     return render(request,'website/contact.html')
+
+def career(request):
+    return render(request,'website/career.html')

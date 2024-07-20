@@ -1,11 +1,21 @@
 {% extends 'layout.html' %}
 
-{% block title %}
-First App  Page usign jinja
+{% block title %} 
+    First App Page using Jinja 
 {% endblock %}
-
 
 {% block content %}
-<h1> FIRST APP Page | DHRUV MAISURIA</h1>
+    <h1>FIRST APP Page | DHRUV MAISURIA</h1>
+    <div class ="grid grid-cols-5  gap-4 m-4">
+    
+        {% for scriptLang in scriptingLang %}
+        <div class="bg-blue-950 p-5 rounded">
+            <img class ="rounded shadow-lg" src="{{ scriptLang.image.url }}" alt="" />
+            <h3 class="text-2xl font-bold">{{ scriptLang.name }}</h3>
+            <a href="{% url 'detail' scriptLang.id %}">
+                
+                <button type="button" class="inline-flex items-center w-[100%] justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus: ring-orange-500">
+                    {{scriptLang.type}}- {{scriptingLang.id}}
+        </div>
+    {% endfor %}
 {% endblock %}
-

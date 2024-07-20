@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Detail Page for {{ get_obj.name }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ get_obj.name }}</h1>
+    <div class="scriptlang-detail">
+        <img src="{{ get_obj.image.url }}" alt="" />
+        <p>Added on: {{ get_obj.date_added }}</p>
+        <p>Type: {{ get_obj.get_type_display }}</p>
+    </div>
+    <a href="{% url 'firstapp' %}">Back to List</a>
+{% endblock %}
